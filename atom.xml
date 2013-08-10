@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Francesco Tassi]]></title>
   <link href="http://ftassi.github.io/atom.xml" rel="self"/>
   <link href="http://ftassi.github.io/"/>
-  <updated>2013-08-10T16:04:48+02:00</updated>
+  <updated>2013-08-10T19:38:43+02:00</updated>
   <id>http://ftassi.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Francesco Tassi]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Long time no see]]></title>
+    <link href="http://ftassi.github.io/blog/2013/08/10/long-time-no-see/"/>
+    <updated>2013-08-10T18:47:00+02:00</updated>
+    <id>http://ftassi.github.io/blog/2013/08/10/long-time-no-see</id>
+    <content type="html"><![CDATA[<p>I have to admin it: <em>I haven&rsquo;t been an active blogger in the last year</em>. Not really because I don&rsquo;t enjoy writing nor for lack of time and motivation, I guess many of reasons that kept me away from this blog are not real, they are just excuses and so <strong>I decided to change</strong>.</p>
+
+<p>From today I&rsquo;ll try to bring this blog to a new life, sharing something about me, and some lessons I&rsquo;ve learned (about PHP and maybe about my <em>real</em> life).</p>
+
+<p>Starting from scratch is always thrilling, what is the best way to enjoy it if not using some new technologies? So I&rsquo;ve decided to get rid of the good old wordpress website and build this new one using <a href="http://octopress.org/">Octopress</a> and <a href="http://pages.github.com/">github pages</a>. Just writing markdown and deploying through a git push sounds like a lot of fun, but it is not just this, it is more a matter of being focused on content instead of dealing with a CMS. Wordpress is really easy to use, and it works just fine, but git is a part of my daily workflow and using it also for blogging feels way more natural, let&rsquo;s see how it will work.</p>
+
+<p>That&rsquo;s all for now, this is just kind of a <em>hello world</em> post.</p>
+
+<p><em>By the way, you&rsquo;ll get all the code of this blog on <a href="https://github.com/ftassi/ftassi.github.io.git">github</a>, if you found any error or typo, please fork and edit the post. Thank you so much!
+This post is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</em></p>
+]]></content>
+  </entry>
   
 </feed>
