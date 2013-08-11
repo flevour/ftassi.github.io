@@ -6,6 +6,8 @@ comments: true
 categories: 
 ---
 
+-> {% img fancybox https://dl.dropboxusercontent.com/u/2881323/ftassi.github.io/chapterone.jpg %} <-
+
 I have to admin it: *I haven't been an active blogger in the last year*. Not really because I don't enjoy writing nor for lack of time and motivation, I guess many of reasons that kept me away from this blog are not real, they are just excuses and so **I decided to change**.
 
 From today I'll try to bring this blog to a new life, sharing something about me, and some lessons I've learned (about PHP and maybe about my *real* life). 
