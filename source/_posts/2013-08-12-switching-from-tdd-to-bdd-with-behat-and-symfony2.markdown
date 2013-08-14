@@ -15,7 +15,10 @@ In this post I won't cover all the details about BDD, Behat or PHPSpec, I'd rath
 
 <!-- more -->
 
-Switching from TDD to BDD is not really about libraries, is more about switching your mindset from testing to describing. Communication is the king here, really. It can sound a bit silly but embracing the fact the you're not checking if your code's working but you're describing how it should work, really IS the key of all this stuff. You can indeed do BDD using PHPUnit instead of behat or phpspec, it's not a matter of tool, it's a matter of how you're approaching your code.
+{% pullquote %}
+Switching from TDD to BDD is not really about libraries, is more about switching your mindset from testing to describing. Communication is the king here, really. It can sound a bit silly but embracing the fact the you're not checking if your code's working but you're describing how it should work, really IS the key of all this stuff. {" You could indeed do BDD using PHPUnit instead of behat or phpspec, it's not a matter of tool, it's a matter of how you're approaching your code. "}
+
+{% endpullquote %}
 
 That said, tool are important, I found that both behat and phpspec do a great job helping you switching your mindset from testing to describing. 
 
@@ -26,7 +29,7 @@ The first step you have to take is understand which library you have to deal wit
 
 * **Behat** is the real boss: the framework testing. It allows you to write expectations in gherkin language.
 * **Mink** is a web acceptance testing library. It allows you to write tests for your web application. You could use it as a stand alone testing library, but using it with behat is way more funny.
-* **MinkExtension** is the *glue* beteween Behat and Mink. The extension will configure a boot Mink and you'll be able to use it within Behat *Context classes.
+* **MinkExtension** is the *glue* beteween Behat and Mink. The extension will configure and boot Mink and you'll be able to use it within Behat *Context classes.
 * **Symfony2Extension** gives you access to Symfony kernel from Behat *Context classes and provide a symfony2 session for Mink.
 
 In order to put all this pieces in place you can follow the [official documentation](http://extensions.behat.org/symfony2/), I'm not going to repeat all the step here.
@@ -46,14 +49,18 @@ default:
         features: features
 ```
 
-Once you start writing features you also start implementing steps in your *Context classes. _In my opinion this is the hardest part_. Context classes grow really fast, while you're testing your application you're continuously implementing new steps and you always have to keep your feature files and your Context classes easy to read. 
+Once you start writing features you also start implementing steps in your *Context classes. 
+
+_In my opinion this is the hardest part_.
+
+Context classes grow really fast, while you're testing your application you're continuously implementing new steps and you always have to keep your feature files and your Context classes easy to read. 
 
 This means that you need to define [macro steps](http://docs.behat.org/guides/2.definitions.html#step-execution-chaining) and you have to organize them in sub contexts in order to keep your code clear. 
 
-You'll also need to get used to jump from step definition and step implementation which can be a bit confusing at start.
+You'll also need to get used to jump from step definition to step implementation which can be a bit confusing at the beginning.
 
 {% pullquote %}
-I guess this is not a thing you can learn from documentation, you'll need some experiance to get good at this. In this first experience I felt the needs of refactoring and reorganizing my steps implementation a few times, even with a small test suite. The good thing is that every time you move thing here and there you feel that you understand the domain of your application a bit more. {" Every time a step smelled was because I was missing a point in my domain, and every refactoring led me to a better understanding of the application I was building."}
+I guess this is not a thing you can learn from documentation, you'll need some experiance to get good at this. In this first experience I felt the needs of refactoring and reorganizing my steps implementation a few times, even with a small test suite. The good thing is that every time you move code around you feel that your understanding of the domain become deeper. {" Every time a step smelled was because I was missing a point in my domain, and every refactoring led me to a better understanding of the application I was building."}
 {% endpullquote %}
 
 Launching the tests
@@ -87,7 +94,7 @@ bin/behat
 ```
 
 I was able to execute all the scenarios NOT tagged with @tbd
-and running 
+and running:
 
 ```bash 
 bin/behat --profile wip
@@ -111,7 +118,7 @@ Working with database
 
 {% pullquote %}
 
-Functional testing your application means dealing with database and fixtures. The basics rules are always the same: you want to have a clean fresh database at the beginning of your test, then you'll fill it with predefined data and after that you'll make assertion against it. Having a clean starting point for each scenario is the key for avoiding dependencies between them.
+Functional testing your application means dealing with database and fixtures. The basics rules are always the same: you want to have a clean fresh database at the beginning of each test, then you'll fill it with predefined data and after that you'll make assertion against it. Having a clean starting point for each scenario is the key for avoiding dependencies between them.
 
 The main difference between behat and your good old functional test is that you won't define a set of fixtures in your setUp() method, you will instead define a set of "*Given*" steps.
 
