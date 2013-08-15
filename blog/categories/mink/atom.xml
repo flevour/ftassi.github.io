@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mink | Francesco Tassi]]></title>
+  <link href="http://ftassi.github.io/blog/categories/mink/atom.xml" rel="self"/>
+  <link href="http://ftassi.github.io/"/>
+  <updated>2013-08-15T11:56:43+02:00</updated>
+  <id>http://ftassi.github.io/</id>
+  <author>
+    <name><![CDATA[Francesco Tassi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Switching from TDD to BDD with Behat and Symfony2]]></title>
+    <link href="http://ftassi.github.io/blog/2013/08/12/switching-from-tdd-to-bdd-with-behat-and-symfony2/"/>
+    <updated>2013-08-12T00:37:00+02:00</updated>
+    <id>http://ftassi.github.io/blog/2013/08/12/switching-from-tdd-to-bdd-with-behat-and-symfony2</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"> <img class="fancybox <a" src="href="https://dl.dropboxusercontent.com/u/2881323/ftassi.github.io/behavior.jpg">https://dl.dropboxusercontent.com/u/2881323/ftassi.github.io/behavior.jpg</a>"></p>
+
+<p>Recently I started a small extra project with a smart fellow from my <a href="http://marche.grusp.org">local PHP User Group</a>, since the project was quite simple and both of us were willing to learn something new, we decided to give BDD a try. In the PHP world BDD means <a href="http://behat.org/">Behat</a>, <a href="http://mink.behat.org">Mink</a> and <a href="http://www.phpspec.net">PHPSpec</a>.</p>
+
+<p>Working on a real project is always different to dealing with documentation, and we had to go through many different issues. Most of the issues related to our old habits with Xunit testing frameworks and some others were due to us getting used to different APIs.</p>
+
+<p>In this post I won&rsquo;t cover all the details about BDD, Behat or PHPSpec, I&rsquo;d rather describe how I switched from PHPUnit and TDD to BDD (and also show some bits of code).</p>
+
+<!-- more -->
+
+
+<p>Surround your pullquote like this {" text to be quoted "}</p>
+
+<p>That said, tools are important, I found that both behat and phpspec do a great job helping you with switching your mindset from testing to describing.</p>
+
+<h2>The components</h2>
+
+<p>The first step you have to take is to understand which library you have to deal with:</p>
+
+<ul>
+<li><strong>Behat</strong> is the real boss: the framework testing. It allows you to write expectations in gherkin language.</li>
+<li><strong>Mink</strong> is a web acceptance testing library. It allows you to write tests for your web application. You could use it as a stand alone testing library, but using it with behat is way more fun.</li>
+<li><strong>MinkExtension</strong> is the <em>glue</em> beteween Behat and Mink. The extension will configure and boot Mink and you&rsquo;ll be able to use it within Behat *Context classes.</li>
+<li><strong>Symfony2Extension</strong> gives you access to Symfony kernel from Behat *Context classes and provides a symfony2 session for Mink.</li>
+</ul>
+
+
+<p>In order to put all these pieces into place you can follow the <a href="http://extensions.behat.org/symfony2/">official documentation</a>, I&rsquo;m not going to repeat all the steps here.</p>
+
+<h2>Organizing your tests</h2>
+
+<p>Surround your pullquote like this {" text to be quoted "}</p>
+
+<p>If you, like me, want to keep all the feature files together at application level you have to define it in your configuration file:</p>
+
+<p>```yaml behat.yml
+default:</p>
+
+<pre><code>paths:
+    features: features
+</code></pre>
+
+<p>```</p>
+
+<p>Once you start writing features you also start implementing steps in your *Context classes.</p>
+
+<p><em>In my opinion this is the hardest part</em>.</p>
+
+<p>Context classes grow really fast; while you&rsquo;re testing your application you&rsquo;re continuously implementing new steps and you always have to keep your feature files and your Context classes easy to read.</p>
+
+<p>This means that you need to define <a href="http://docs.behat.org/guides/2.definitions.html#step-execution-chaining">macro steps</a> and you have to organize them into sub contexts in order to keep your code clear.</p>
+
+<p>You&rsquo;ll also need to get used to jumping from step definition to step implementation which can be a bit confusing at the beginning.</p>
+
+<p>Surround your pullquote like this {" text to be quoted "}</p>
+
+<h2>Launching the tests</h2>
+
+<p>Surround your pullquote like this {" text to be quoted "}</p>
+
+<p>``` yaml behat.tml
+default:</p>
+
+<pre><code>filters:
+    tags:   "~@tbd"
+</code></pre>
+
+<p>wip:</p>
+
+<pre><code>filters:
+    tags:       "@wip"
+</code></pre>
+
+<p>```</p>
+
+<p>With this configuration, running:</p>
+
+<p><code>bash
+bin/behat
+</code></p>
+
+<p>I was able to execute all the scenarios NOT tagged with @tbd
+and running:</p>
+
+<p><code>bash
+bin/behat --profile wip
+</code></p>
+
+<p>I was able to run the current &ldquo;work in progress&rdquo; scenario.</p>
+
+<p>This is really nice: having different profiles is quite similar to having different suites, and excluding the @tbd tag from the default profile allowed me to execute the whole set of scenarios without having all the <em>undefined steps</em> noise from the steps that were not implemented yet.</p>
+
+<p>Surround your pullquote like this {" text to be quoted "}</p>
+
+<p><blockquote><p>I think this is one of the big advantages of BDD: it really changes the way you think about your application. Of course, now that I&rsquo;ve realized this I could do the same thing using good old PHPUnit, but before this exercise I never focussed on describing a whole set of functionality with a test suite before coding.</p></blockquote></p>
+
+<h2>Working with a database</h2>
+
+<p>Surround your pullquote like this {" text to be quoted "}</p>
+
+<p>```php FeaturesContext.php</p>
+
+<pre><code>    public function cleanDatabase()
+{
+    $container = $this-&gt;kernel-&gt;getContainer();
+    $registry = $container-&gt;get('doctrine');
+    $om = $registry-&gt;getManager();
+    $type = 'ORM';
+
+    $executorClass = 'Doctrine\\Common\\DataFixtures\\Executor\\' . $type . 'Executor';
+    $referenceRepository = new ProxyReferenceRepository($om);
+    $cacheDriver = $om-&gt;getMetadataFactory()-&gt;getCacheDriver();
+
+    if ($cacheDriver) {
+        $cacheDriver-&gt;deleteAll();
+    }
+
+    $connection = $om-&gt;getConnection();
+    if ($connection-&gt;getDriver() instanceOf SqliteDriver) {
+        $params = $connection-&gt;getParams();
+        $name = isset($params['path']) ? $params['path'] : $params['dbname'];
+
+        if (!isset(self::$cachedMetadatas)) {
+            self::$cachedMetadatas = $om-&gt;getMetadataFactory()-&gt;getAllMetadata();
+        }
+        $metadatas = self::$cachedMetadatas;
+
+        // TODO: handle case when using persistent connections. Fail loudly?
+        $schemaTool = new SchemaTool($om);
+        $schemaTool-&gt;dropDatabase($name);
+        if (!empty($metadatas)) {
+            $schemaTool-&gt;createSchema($metadatas);
+        }
+
+        $executor = new $executorClass($om);
+        $executor-&gt;setReferenceRepository($referenceRepository);
+    }
+
+    $purgerClass = 'Doctrine\\Common\\DataFixtures\\Purger\\' . $type . 'Purger';
+    $purger = new $purgerClass();
+    $executor = new $executorClass($om, $purger);
+    $executor-&gt;setReferenceRepository($referenceRepository);
+    $executor-&gt;purge();
+
+    return $executor;
+}
+</code></pre>
+
+<p>```</p>
+
+<p>This implementation is not really optimized for performance but was enough for my project which had a really small database and just a few scenarios. Maybe for a more complex use case you&rsquo;ll need a more efficient way to drop and recreate the database (maybe with some kind of caching of the sqlite file?).</p>
+]]></content>
+  </entry>
+  
+</feed>
