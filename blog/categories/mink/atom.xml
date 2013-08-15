@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mink | Francesco Tassi]]></title>
   <link href="http://ftassi.github.io/blog/categories/mink/atom.xml" rel="self"/>
   <link href="http://ftassi.github.io/"/>
-  <updated>2013-08-15T11:57:26+02:00</updated>
+  <updated>2013-08-15T13:48:10+02:00</updated>
   <id>http://ftassi.github.io/</id>
   <author>
     <name><![CDATA[Francesco Tassi]]></name>
@@ -169,6 +169,12 @@ bin/behat --profile wip
 <p>```</p>
 
 <p>This implementation is not really optimized for performance but was enough for my project which had a really small database and just a few scenarios. Maybe for a more complex use case you&rsquo;ll need a more efficient way to drop and recreate the database (maybe with some kind of caching of the sqlite file?).</p>
+
+<h2>Conclusion</h2>
+
+<p>I think I&rsquo;ll go on exploring with BDD. Tools are mature and stable enough to work with, and the whole ecosystem looks solid and ready to use. Behat and Mink are great tools, PHPSpec (which I&rsquo;ll cover in another post) is just as good.</p>
+
+<p>I haven&rsquo;t found best practices yet, I&rsquo;m not sure that I&rsquo;m always doing the right thing and I have some old habits that I need to lose, but the overall impression is really good.</p>
 ]]></content>
   </entry>
   
