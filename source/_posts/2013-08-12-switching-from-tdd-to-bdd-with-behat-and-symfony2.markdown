@@ -180,3 +180,10 @@ And there are 2 bookable Courts
 
 This implementation is not really optimized for performance but was enough for my project which had a really small database and just a few scenarios. Maybe for a more complex use case you'll need a more efficient way to drop and recreate the database (maybe with some kind of caching of the sqlite file?).
 
+Conclusion
+----------
+
+I think I'll go on exploring with BDD. Tools are mature and stable enough, and the whole ecosystem looks solid and ready to use. Behat and Mink are great tools, PHPSpec (which I'll cover in another post) is just as good.
+
+I haven't found best practices yet, I'm not sure that I'm always doing the right thing and I have some old habits that I need to lose, but the overall impression is really good. 
+
