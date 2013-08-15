@@ -4,7 +4,7 @@
   <title><![CDATA[Francesco Tassi]]></title>
   <link href="http://ftassi.github.io/atom.xml" rel="self"/>
   <link href="http://ftassi.github.io/"/>
-  <updated>2013-08-15T11:56:43+02:00</updated>
+  <updated>2013-08-15T11:57:26+02:00</updated>
   <id>http://ftassi.github.io/</id>
   <author>
     <name><![CDATA[Francesco Tassi]]></name>
@@ -77,8 +77,8 @@ Symfony2Extension gives you the ability to have separate feature files for each 
 
 <p>You&rsquo;ll also need to get used to jumping from step definition to step implementation which can be a bit confusing at the beginning.</p>
 
-<p><span class='pullquote-right' data-pullquote='Every time a step stalled, it was because I was missing a point in my domain, and every refactoring led me to a better understanding of the application I was building.'>
-I guess this is not a thing you can learn from documentation, you&rsquo;ll need some experience to get good at this. In this first experience I felt the need to refactor and reorganize my steps implementation a few times, even with a small test suite. The good thing is that every time you move code around you feel that your understanding of the domain becomes deeper. Every time a step stalled, it was because I was missing a point in my domain, and every refactoring led me to a better understanding of the application I was building.
+<p><span class='pullquote-right' data-pullquote='Every time a step smelled, it was because I was missing a point in my domain, and every refactoring led me to a better understanding of the application I was building.'>
+I guess this is not a thing you can learn from documentation, you&rsquo;ll need some experience to get good at this. In this first experience I felt the need to refactor and reorganize my steps implementation a few times, even with a small test suite. The good thing is that every time you move code around you feel that your understanding of the domain becomes deeper. Every time a step smelled, it was because I was missing a point in my domain, and every refactoring led me to a better understanding of the application I was building.
 </span></p>
 
 <h2>Launching the tests</h2>
