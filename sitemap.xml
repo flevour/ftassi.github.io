@@ -1,37 +1,37 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://ftassi.github.io/blog/2013/08/10/long-time-no-see/</loc>
+        <loc>http://www.ftassi.com/blog/2013/08/10/long-time-no-see/</loc>
         <lastmod>2013-08-15T11:55:06+02:00</lastmod>
     </url>
     <url>
         <loc>
-            http://ftassi.github.io/blog/2013/08/12/switching-from-tdd-to-bdd-with-behat-and-symfony2/
+            http://www.ftassi.com/blog/2013/08/12/switching-from-tdd-to-bdd-with-behat-and-symfony2/
         </loc>
         <lastmod>2013-08-15T13:51:31+02:00</lastmod>
     </url>
     <url>
-        <loc>http://ftassi.github.io/about/</loc>
+        <loc>http://www.ftassi.com/about/</loc>
         <lastmod>2013-08-10T18:05:23+02:00</lastmod>
     </url>
     <url>
-        <loc>http://ftassi.github.io/archives/</loc>
+        <loc>http://www.ftassi.com/archives/</loc>
         <lastmod>2013-08-15T13:51:31+02:00</lastmod>
     </url>
     <url>
-        <loc>http://ftassi.github.io/blog/archives/</loc>
+        <loc>http://www.ftassi.com/blog/archives/</loc>
         <lastmod>2013-08-15T13:51:31+02:00</lastmod>
     </url>
     <url>
-        <loc>http://ftassi.github.io/blog/</loc>
+        <loc>http://www.ftassi.com/blog/</loc>
         <lastmod>2013-08-15T13:51:31+02:00</lastmod>
     </url>
     <url>
-        <loc>http://ftassi.github.io/</loc>
+        <loc>http://www.ftassi.com/</loc>
         <lastmod>2013-08-15T13:51:31+02:00</lastmod>
     </url>
     <url>
-        <loc>http://ftassi.github.io/robots.txt</loc>
+        <loc>http://www.ftassi.com/robots.txt</loc>
         <lastmod>2013-08-10T16:41:51+02:00</lastmod>
     </url>
 </urlset>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Francesco Tassi]]></title>
-  <link href="http://ftassi.github.io/atom.xml" rel="self"/>
-  <link href="http://ftassi.github.io/"/>
-  <updated>2013-08-15T13:51:40+02:00</updated>
-  <id>http://ftassi.github.io/</id>
+  <link href="http://www.ftassi.com/atom.xml" rel="self"/>
+  <link href="http://www.ftassi.com/"/>
+  <updated>2013-08-17T14:36:50+02:00</updated>
+  <id>http://www.ftassi.com/</id>
   <author>
     <name><![CDATA[Francesco Tassi]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Switching from TDD to BDD with Behat and Symfony2]]></title>
-    <link href="http://ftassi.github.io/blog/2013/08/12/switching-from-tdd-to-bdd-with-behat-and-symfony2/"/>
+    <link href="http://www.ftassi.com/blog/2013/08/12/switching-from-tdd-to-bdd-with-behat-and-symfony2/"/>
     <updated>2013-08-12T00:37:00+02:00</updated>
-    <id>http://ftassi.github.io/blog/2013/08/12/switching-from-tdd-to-bdd-with-behat-and-symfony2</id>
+    <id>http://www.ftassi.com/blog/2013/08/12/switching-from-tdd-to-bdd-with-behat-and-symfony2</id>
     <content type="html"><![CDATA[<p style="text-align:center;"> <img class="fancybox" src="https://dl.dropboxusercontent.com/u/2881323/ftassi.github.io/behavior.jpg"></p>
 
 <p>Recently I started a small extra project with a smart fellow from my <a href="http://marche.grusp.org">local PHP User Group</a>, since the project was quite simple and both of us were willing to learn something new, we decided to give BDD a try. In the PHP world BDD means <a href="http://behat.org/">Behat</a>, <a href="http://mink.behat.org">Mink</a> and <a href="http://www.phpspec.net">PHPSpec</a>.</p>
@@ -259,9 +259,9 @@ This was not my first project guided by tests, but I had never written a whole b
   
   <entry>
     <title type="html"><![CDATA[Long time no see]]></title>
-    <link href="http://ftassi.github.io/blog/2013/08/10/long-time-no-see/"/>
+    <link href="http://www.ftassi.com/blog/2013/08/10/long-time-no-see/"/>
     <updated>2013-08-10T18:47:00+02:00</updated>
-    <id>http://ftassi.github.io/blog/2013/08/10/long-time-no-see</id>
+    <id>http://www.ftassi.com/blog/2013/08/10/long-time-no-see</id>
     <content type="html"><![CDATA[<p style="text-align:center;"> <img class="fancybox" src="https://dl.dropboxusercontent.com/u/2881323/ftassi.github.io/chapterone.jpg"></p>
 
 <p>I have to admit it: <em>I haven&rsquo;t been an active blogger in the last year</em>. Not really because I don&rsquo;t enjoy writing nor for lack of time and motivation, I guess many of reasons that kept me away from this blog are not real, they are just excuses and so <strong>I decided to change</strong>.</p>
