@@ -13,6 +13,8 @@ Some time ago we (me and my girlfriend) decided to travel around the world, but 
 So we moved to Edinburgh from May 2012 to February 2013. In mid February we were back to Italy. We spent the all summer here, with friends and family, {"and now is backpack time again."}
 {% endpullquote %}
 
+<!-- more -->
+
 From the 26th of September we'll move to Las Palmas de Gran Canaria. For how long? Who knows, best case scenario is until April 2014, but we could come back quicker if Monica won't be able to find a decent job down there. 
 
 A brand new adventure is about to start and I'm quite excited about it, but this is not really the point of this post.
