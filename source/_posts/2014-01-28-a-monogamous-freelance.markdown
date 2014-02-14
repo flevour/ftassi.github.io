@@ -20,7 +20,7 @@ For a very long time I thought that becoming a successfull freelance was a matte
 I was getting 90% of the benefits (I'd say value) that was coming from jobs from my main customer, but still I was putting so much effort to get the other 10%. {"Instead of focussing on the most valuable thing, I was struggling with meaningless others."} 
 {% endpullquote %}
 
-I'm now working only for one customer and I'll stick with it for some time (as long as it will feel right for both of us, I guess). I'm not working **for** them, I'm working **with** them. This is not possible for every team, but when you find the right team it became delightful.
+I'm now working only for one customer and I'll stick with it for some time (as long as it will feel right for both of us, I guess). I'm not working **for** them, I'm working **with** them. This is not possible for every team, but when you find the right team it can become delightful.
 
 With such a long term collaboration you:
 
@@ -43,10 +43,10 @@ Some freelance may be **concerned about loosing "grip" with their market**, loos
 
 Yes, one single customer can be considered a bit risky but if you really can create a binding made by *mutual advantages* that kind of risk is not an issue. Plus I'm not cutting all my relationships with the communities I'm involved in, so when I'll need a new job I'm pretty sure I'll find one ([black swan][black-swan] anyone?). 
 
-In the meantime, if you really nead a [Symfony developer][ftassi] and want to hire me, you can [*think about hiring us*][ideato];).
+In the meantime, if you really nead a [Symfony developer][ftassi] and want to hire me, you can [*think about hiring us*][ideato] ;).
 
 Having a single team committment allows me to be more focussed on what I'm doing and leaves me more time to contribute to open source projects or build a portfolio that will stand for me when I'll need it. I'm happy with this configuration at the moment, and I'm feeling that the right thing for me is to stick with it for a while.
 
-[black-swan]: http://en.wikipedia.org/wiki/Black_swan_theory]
+[black-swan]: http://en.wikipedia.org/wiki/Black_swan_theory
 [ideato]: http://www.ideato.it/
 [ftassi]: http://it.linkedin.com/in/francescotassi
